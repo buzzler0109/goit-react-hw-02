@@ -1,0 +1,23 @@
+.online {
+  color: green;
+}
+
+.offline {
+  color: red;
+}
+
+.container {
+  border: solid 3px black;
+  padding: 10px;
+  border-radius: 10px;
+  min-height: 120px;
+}
+
+.name {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.2px;
+  text-align: center;
+}
