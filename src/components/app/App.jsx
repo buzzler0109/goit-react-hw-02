@@ -32,6 +32,9 @@ const App = () => {
   };
 
   const totalFeedback = values.good + values.neutral + values.bad;
+  const positivePerc = Math.round(
+    ((values.good + values.neutral) / totalFeedback) * 100
+  );
 
   return (
     <>
@@ -41,7 +44,11 @@ const App = () => {
         <Notification />
       ) : (
         <div className="feedback">
-          <Feedback stats={values} totalFeedback={totalFeedback} />
+          <Feedback
+            stats={values}
+            totalFeedback={totalFeedback}
+            positivePerc={positivePerc}
+          />
           <Chart1
             good={values.good}
             neutral={values.neutral}

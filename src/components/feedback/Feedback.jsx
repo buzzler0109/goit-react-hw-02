@@ -1,6 +1,6 @@
 import css from "./Feedback.module.scss";
 
-const Feedback = ({ stats, totalFeedback }) => {
+const Feedback = ({ stats, totalFeedback, positivePerc }) => {
   return (
     <div className={css.stats}>
       <p className={css.item}>Good: {stats.good}</p>
@@ -10,10 +10,7 @@ const Feedback = ({ stats, totalFeedback }) => {
       {totalFeedback > 0 && (
         <>
           <p className={css.item}>Total: {totalFeedback}</p>
-          <p className={css.item}>
-            Positive:{" "}
-            {Math.round(((stats.good + stats.neutral) / totalFeedback) * 100)}%
-          </p>
+          <p className={css.item}>Positive: {positivePerc}%</p>
         </>
       )}
     </div>
