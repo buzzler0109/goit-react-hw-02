@@ -6,13 +6,8 @@ const Feedback = ({ stats, totalFeedback, positivePerc }) => {
       <p className={css.item}>Good: {stats.good}</p>
       <p className={css.item}>Neutral: {stats.neutral}</p>
       <p className={css.item}>Bad: {stats.bad}</p>
-
-      {totalFeedback > 0 && (
-        <>
-          <p className={css.item}>Total: {totalFeedback}</p>
-          <p className={css.item}>Positive: {positivePerc}%</p>
-        </>
-      )}
+      <p className={css.item}>Total: {totalFeedback}</p>
+      <p className={css.item}>Positive: {positivePerc}%</p>
     </div>
   );
 };

@@ -40,9 +40,7 @@ const App = () => {
     <>
       <Description />
       <Options update={updateFeedback} totalFeedback={totalFeedback} />
-      {!totalFeedback ? (
-        <Notification />
-      ) : (
+      {totalFeedback > 0 ? (
         <div className="feedback">
           <Feedback
             stats={values}
@@ -56,6 +54,8 @@ const App = () => {
             total={totalFeedback}
           />
         </div>
+      ) : (
+        <Notification />
       )}
     </>
   );
